@@ -1,0 +1,29 @@
+body,td,input {
+	font-size:12px;
+	line-height:130%;
+	font-family:verdana,ËÎÌו;
+}
+.border {
+	border:solid 1px 1px 1px 1px #000000
+}
+.imgborder {
+	border:solid #000000;
+	border-top-width:0px;
+	border-bottom-width:0px;
+	border-left-width:1px;
+	border-right-width:1px;
+}
+.imgborderleft {
+	border:solid #000000;
+	border-top-width:0px;
+	border-bottom-width:0px;
+	border-left-width:1px;
+	border-right-width:0px;
+}
+.bluetdborder {
+	border:solid #000000;
+	border-top-width:1px;
+	border-bottom-width:1px;
+	border-left-width:0px;
+	border-right-width:0px;
+}

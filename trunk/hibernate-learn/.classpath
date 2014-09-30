@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/xwork-1.0.4.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/aopalliance.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/cglib-full-2.0.2.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/commons-collections-2.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/commons-dbcp-1.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/commons-lang-1.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/commons-pool-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/dom4j-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/ehcache-0.9.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/freemarker-2.3.jar"/>
+	<classpathentry sourcepath="F:/Repository/study_step/lesson_framework/SimpleDemo/SimpleDemo/lib/hibernate-2.1.7-src.jar" kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/hibernate-2.1.7.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/hsqldb-1.7.2.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/jta.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/mysql-3.0.16.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/odmg-3.0.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/ognl.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/oscore.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/pell-multipart.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/spring-1.1.2.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/velocity-dep.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/webwork2-spring.jar"/>
+	<classpathentry kind="lib" path="D:/environment/eclipse3/workspace/PersistServiceFramework/lib/webwork-2.1.6.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

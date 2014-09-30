@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<!--
+  Default configuration file for examples application.
+  Each module also has its own struts-config under: /WEB-INF/$MODULE/
+  @version $Revision: 1.9 $ $Date: 2004-09-07 03:50:06 +0100 (Tue, 07 Sep 2004) $
+-->
+<struts-config>
+  <data-sources />
+  
+  <!-- ========== Form Bean Definitions =================================== -->
+  <form-beans>
+
+	  <!-- example form bean -->
+      <form-bean name="bookListForm" type="com.company.form.BookListForm" />
+	  
+	  <!-- example form bean -->      
+	  <form-bean name="bookEditForm" type="com.company.form.BookEditForm" />
+	  
+	  <!-- example form bean -->      
+	  <form-bean name="customerListForm" type="com.company.form.CustomerListForm" />
+	  
+	  <!-- example form bean -->      
+	  <form-bean name="customerEditForm" type="com.company.form.CustomerEditForm" />
+  </form-beans>
+   
+   
+   
+   
+   
+   
+  <!-- ========== Global Forward Definitions ============================== -->
+  <global-exceptions />
+  
+  <global-forwards >
+      <forward name="welcome" path="/default.do" redirect="true" />
+   </global-forwards>
+   
+   
+  
+  <!-- ========== Action Mapping Definitions ============================== -->
+  <action-mappings >
+
+    <action forward="/jsp/example/index.jsp"   path="/default" unknown="true" />
+
+    
+    <!-- /bookList.do -->
+    <action
+         attribute="bookListForm"
+         input="/jsp/example/bookList.jsp"
+         name="bookListForm"
+         path="/bookList"
+         scope="request"
+         type="com.company.action.BookListAction">
+         
+         <exception
+                  key="exception.hibernateException"
+                  type="net.sf.hibernate.HibernateException"
+         path="/jsp/example/exception.jsp"/>
+                  
+         <forward name="showList" path="/jsp/example/bookList.jsp" />
+      </action>
+    
+    <!-- /bookAdd.do-->
+    <action forward="/jsp/example/bookAdd.jsp"   path="/forwardAdd" unknown="true" />
+    <action
+         attribute="bookEditForm"
+         input="/jsp/example/bookAdd.jsp"
+         name="bookEditForm"
+         parameter="do"
+         path="/bookAdd"
+         scope="request"
+         type="com.company.action.BookEditAction"
+         validate="true">
+         <forward name="showList" 	path="/bookList.do" redirect="true" />
+         <forward name="showAdd" 	path="/jsp/example/bookAdd.jsp" />
+    </action>
+
+    <!-- /bookBorrow.do-->
+    <action
+         attribute="bookEditForm"
+         input="/jsp/example/borrowBook.jsp"
+         name="bookEditForm"
+         parameter="do"
+         path="/bookBorrow"
+         scope="request"
+         type="com.company.action.BookEditAction"
+         validate="false">
+
+         <exception
+                  key="exception.BookNotExistException"
+                  type="com.company.exception.liberary.book.BookNotExistException"
+         path="/jsp/example/exception.jsp"/>
+         
+         <exception
+                  key="exception.CustomerNotExistException"
+                  type="com.company.exception.liberary.customer.CustomerNotExistException"
+         path="/jsp/example/exception.jsp"/>         
+         
+         <forward name="showBorrow" path="/jsp/example/borrowBook.jsp" />
+         <forward name="showList" 	path="/bookList.do" redirect="true" />
+    </action>
+    
+    <!-- /bookEdit.do -->
+    <action
+         attribute="bookEditForm"
+         input="/jsp/example/bookEdit.jsp"
+         name="bookEditForm"
+         parameter="do"
+         path="/forwardEdit"
+         scope="request"
+         type="com.company.action.BookEditAction"
+         validate="false">
+         <forward name="showEdit" 	path="/jsp/example/bookEdit.jsp" />
+         <forward name="showList" 	path="/bookList.do" redirect="true" />
+    </action>    
+    
+    <action
+         attribute="bookEditForm"
+         input="/jsp/example/bookEdit.jsp"
+         name="bookEditForm"
+         parameter="do"
+         path="/bookEdit"
+         scope="request"
+         type="com.company.action.BookEditAction"
+         validate="true">
+         <forward name="showEdit" 	path="/jsp/example/bookEdit.jsp" />
+         <forward name="showList" 	path="/bookList.do" redirect="true" />
+    </action>
+    
+    
+    <!-- /customerLis.do -->
+    <action
+         attribute="customerListForm"
+         input="/jsp/example/customerList.jsp"
+         name="customerListForm"
+         path="/customerList"
+         scope="request"
+         type="com.company.action.CustomerListAction"
+         validate="false">
+         <forward name="showCustomerList" path="/jsp/example/customerList.jsp" />
+      </action>
+    
+
+    <!-- /customerAdd.do -->
+    <action forward="/jsp/example/customerAdd.jsp"   path="/forwardCustomerAdd" unknown="true" />
+    <action
+         attribute="customerEditForm"
+         input="/jsp/example/customerAdd.jsp"
+         name="customerEditForm"
+         parameter="do"
+         path="/customerAdd"
+         scope="request"
+         type="com.company.action.CustomerEditAction"
+         validate="true">
+         
+         <forward name="customerList" 	path="/customerList.do"  redirect="true" />         <forward name="editCustomer" path="/jsp/example/customerEdit.jsp" />
+         <forward name="addCustomer" 	path="/jsp/example/customerAdd.jsp" />
+    </action>
+        
+    <!-- /customerEdit.do -->
+    <action
+         attribute="customerEditForm"
+         input="/jsp/example/customerEdit.jsp"
+         name="customerEditForm"
+         parameter="do"
+         path="/forwardCustomerEdit"
+         scope="request"
+         type="com.company.action.CustomerEditAction"
+         validate="false">
+         
+         <forward name="customerList" 		path="/customerList.do"  redirect="true" />
+         <forward name="editCustomer" 		path="/jsp/example/customerEdit.jsp" />
+         <forward name="showBorrowBooks" 	path="/jsp/example/customerBorrowBooks.jsp" />
+    </action>
+    
+    <action
+         attribute="customerEditForm"
+         input="/jsp/example/customerEdit.jsp"
+         name="customerEditForm"
+         parameter="do"
+         path="/customerEdit"
+         scope="request"
+         type="com.company.action.CustomerEditAction"
+         validate="true">
+         
+         <forward name="customerList" 	path="/customerList.do"  redirect="true" />
+         <forward name="editCustomer" 	path="/jsp/example/customerEdit.jsp" />
+    </action>
+   
+   </action-mappings>
+
+
+
+
+
+
+
+ <!-- ========== Controller Configuration ================================ -->
+
+
+
+
+
+
+ <!-- ========== Message Resources Definitions =========================== -->
+ <message-resources parameter="com.company.ApplicationResources" />
+
+
+
+
+
+
+  <!-- ============================================ Plug Ins Configuration  -->
+  <!-- 
+       Add multiple validator resource files by setting the pathnames property 
+       with a comma delimitted list of resource files to load. 
+    -->
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
+    <set-property property="stopOnFirstError" value="true" />
+  </plug-in>
+
+
+
+
+</struts-config>

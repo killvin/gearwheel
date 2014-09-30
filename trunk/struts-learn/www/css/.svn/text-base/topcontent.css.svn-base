@@ -1,0 +1,9 @@
+body {  font-family: "宋体"; font-size: 12px; margin-top: 0px; margin-left: 0px; color: #000000; background-color: #ffffff; margin-right: 0px; margin-bottom: 0px;}
+a{  font-family: "宋体"; font-size: 12px; color: #000000}
+a:link{  font-family: "宋体"; font-size: 12px; color: #000000}
+a:hover{  font-family: "宋体"; font-size: 12px; color: #CC3300}
+td{font-family: "宋体"; font-size: 12px; color: #000000;line-height:16px;text-indent:4px}
+th {  font-family: "宋体"; font-size: 12px; color: #FFFFFF; background-color: #6699CC; line-height: 18px;text-indent:4px}
+.noClick {  background: #FFFFFF; cursor: hand;}
+.clicked {  background: #EBF8FE; cursor: default;}
+

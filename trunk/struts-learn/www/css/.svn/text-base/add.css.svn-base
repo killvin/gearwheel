@@ -1,0 +1,5 @@
+body {  font-family: "宋体"; font-size: 12px; margin-top: 15px; margin-left: 15px; color: #000000; background-color: #ffffff; margin-right: 15px; margin-bottom: 15px}
+td {  font-family: "宋体"; font-size: 12px; color: #000000;padding-left: 8px;line-height: 18px}
+.button {  font-family: "宋体"; font-size: 12px; color: #FFFFFF; background-color: #61759E; border: 1px #425780 solid; font-weight: bold;cursor: hand; height: 18px; width: 50px}
+input {  font-family: "宋体"; font-size: 12px; color: #000000; border: #000000; border-style: solid; border-width: 1px}
+th{  font-family: "宋体"; font-size: 14px; color: #ffffff;text-align:left;font-weight: bold; line-height: 20px;background-color: #4A81B1;padding-left: 10px}

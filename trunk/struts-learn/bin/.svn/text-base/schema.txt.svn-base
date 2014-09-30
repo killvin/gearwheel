@@ -1,0 +1,17 @@
+alter table book drop constraint FK2E3AE996607CC6
+drop table book if exists
+drop table customer if exists
+create table book (
+   id INTEGER NOT NULL IDENTITY,
+   title VARCHAR(255),
+   author VARCHAR(255),
+   available BIT,
+   customer_fk INTEGER
+)
+create table customer (
+   id INTEGER NOT NULL IDENTITY,
+   name VARCHAR(255),
+   lastname VARCHAR(255),
+   age INTEGER
+)
+alter table book add constraint FK2E3AE996607CC6 foreign key (customer_fk) references customer

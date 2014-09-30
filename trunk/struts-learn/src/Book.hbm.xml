@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<!-- DO NOT EDIT: This is a generated file that is synchronized -->
+<!-- by MyEclipse Hibernate tool integration.                   -->
+<!-- Created Wed Jul 27 12:01:58 CEST 2005                         -->
+<hibernate-mapping package="com.company.vo">
+
+	<class name="Book" table="book">
+		<id name="id" column="id" type="java.lang.Integer">
+		  
+		    <!--
+			<generator class="sequence">
+				<param name="sequence">book_id_seq</param>
+			</generator>
+			-->
+			<generator class="native"> 
+			</generator> 
+		</id>
+
+		<property name="title" column="title" type="java.lang.String" />
+		<property name="author" column="author" type="java.lang.String" />
+		<property name="available" column="available"
+			type="java.lang.Boolean" />
+
+		<many-to-one name="customer" column="customer_fk"
+			class="Customer" />
+	</class>
+
+</hibernate-mapping>

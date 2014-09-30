@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/common"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/drive"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate2"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/j2ee"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/log4j"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/unit"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/struts"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ecs"/>
+	<classpathentry kind="lib" path="E:/framwork/lib/opensymphony/osworkflow/osworkflow-2.7.0.jar"/>
+	<classpathentry kind="lib" path="E:/framwork/lib/opensymphony/oscore/oscore-2.2.4.jar"/>
+	<classpathentry kind="lib" path="E:/framwork/lib/drive/db2/db2java.zip"/>
+	<classpathentry kind="lib" path="D:/repository/eclipse/workspace/StrutsSampleProject/lib/gearwheel/gearwheel.jar"/>
+	<classpathentry kind="output" path="class"/>
+</classpath>

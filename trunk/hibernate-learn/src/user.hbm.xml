@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<!-- DO NOT EDIT: This is a generated file that is synchronized -->
+<!-- by MyEclipse Hibernate tool integration.                   -->
+<!-- Created Sat Feb 19 12:00:50 CST 2005                         -->
+<hibernate-mapping package="com.company.application.bo">
+
+    <class name="User" table="user">
+        <id name="id" column="user_id" type="java.lang.String">
+            <generator class="uuid.hex"/>
+        </id>
+ 
+    </class>
+    
+</hibernate-mapping>
+

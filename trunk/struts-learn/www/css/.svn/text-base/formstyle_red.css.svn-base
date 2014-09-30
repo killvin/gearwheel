@@ -1,0 +1,27 @@
+BODY {  font-size : 12px;  font-family : 宋体;margin-top: 0px; margin-left:0px;margin-right:0px; margin-bottom:0px;background-color : #ffffff;}
+table {  font-family: "宋体"; font-size: 12px; color: #000000; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;}
+TH {  font-family: "宋体"; font-size : 12px; color: #FFFFFF; height: 20px; clip:  rect(   ); border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; background-color: #6699CC;}
+A:HOVER {  font-family: "宋体"; font-size: 12px; color : #7d9ec0; text-decoration: none;}
+a:link {  font-family: "宋体"; font-size: 12px; text-decoration: none;}
+a {  font-family: "宋体"; font-size: 12px; color: #000000; text-decoration: none;}
+.result {  font-family: "宋体"; font-size: 12px; font-weight: bold;}
+input {  font-family: "宋体"; font-size: 12px; color: #000000; border: #000000; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #ffffff;}
+.repeatx {  background-repeat: repeat-x;}
+.repeaty {  background-repeat: repeat-y;}
+.norepeat {  background-repeat: no-repeat;}
+.notmodify {  font-family: "宋体"; font-size: 12px; color: #000000; font-weight: normal; background-image: url(/btcjerpWeb/images/blank.gif); border: 1px #f3f3f3 solid; background-color: #ffffff;}
+.hand {  cursor: hand}
+.selectedtr {  font-family: "宋体"; font-size: 12px; color : black; background-color : #bcd2ee; cursor: hand}
+.noborder{border-width : 0px 0px 0px 0px;
+  background-color : #ffffff;
+}
+TD{
+  font-size : 12px;
+  font-family : 宋体;
+;}
+.noborder{
+  background-color : #ffffff;border-width : 0px 0px 0px 0px;}
+
+.pages0 {  font-family: "宋体"; font-size: 12px; color: #000000; border: #000000; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #ffffff;}
+.pages1 {  font-family: "宋体"; font-size: 12px; color: #000000; border: #000000; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #ffffff;}
+.pages2 {  font-family: "宋体"; font-size: 12px; color: #000000; border: #000000; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; background-color: #ffffff;}

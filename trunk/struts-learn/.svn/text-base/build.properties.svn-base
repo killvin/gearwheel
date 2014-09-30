@@ -1,0 +1,32 @@
+# Library directory within project. Where third party jars reside.
+lib.dir = ${basedir}/lib
+
+# All artifacts produced by the build go somewhere underneath the target dir
+target.dir=${basedir}/target
+
+# Directory we generate distribution units such as jars and zips to
+dist.dir = ${basedir}/dist
+
+# Source Directory
+src.java.dir=${basedir}/src/
+src.test.dir=${basedir}/src/test
+
+# Web context directory
+war.dir=${basedir}/www
+
+# Test Directory
+test.dir=${basedir}/test
+
+# Jar file name
+jar.name=butone.jar
+
+# War file name
+war.name=struts-example
+
+# Tomcat name
+tomcat.dir=D:/repository/Tomcat 5.0/
+
+# Release dir
+release.dir=${basedir}/release/
+
+version=0.3

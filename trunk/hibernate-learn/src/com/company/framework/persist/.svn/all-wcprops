@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/39/trunk/hibernate-learn/src/com/company/framework/persist
+END
+IPersistService.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/39/trunk/hibernate-learn/src/com/company/framework/persist/IPersistService.java
+END
+HibernatePersistService.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/39/trunk/hibernate-learn/src/com/company/framework/persist/HibernatePersistService.java
+END

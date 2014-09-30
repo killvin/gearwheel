@@ -1,0 +1,25 @@
+#calendar {
+    LEFT: 50px; VISIBILITY: hidden; POSITION: absolute; TOP: 50px; BACKGROUND-COLOR: white
+}
+TD.cal {
+    FONT-SIZE: 8pt; FONT-FAMILY: arial
+}
+TD.calmonth {
+    FONT-SIZE: 8pt; FONT-FAMILY: arial; TEXT-ALIGN: right
+}
+TD.caltoday {
+    BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 8pt; BORDER-LEFT-COLOR: #800000; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #800000; COLOR: white; BORDER-TOP-COLOR: #800000; FONT-FAMILY: arial; BACKGROUND-COLOR: #c0c0c0; TEXT-ALIGN: right; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #800000; border-type: solid
+}
+INPUT.caltoday {
+    FONT-SIZE: 8pt; WIDTH: 47px; FONT-FAMILY: arial; HEIGHT: 20px
+}
+A.cal {
+    COLOR: #000000; TEXT-DECORATION: none
+}
+A.calthismonth {
+    COLOR: #000000; TEXT-DECORATION: none
+}
+A.calothermonth {
+    COLOR: #808080; TEXT-DECORATION: none
+}
+

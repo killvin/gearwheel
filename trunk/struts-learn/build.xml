@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<project name="template" basedir="." default="help">
+	<property file="build.properties"/>
+	
+	<path id="all-libs">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>	
+
+	<target name="help">
+		<echo message=""/>
+		<echo message="Reporting Tool build file"/>
+		<echo message="------------------------------------------------------"/>
+		<echo message=""/>
+		<echo message="Available targets are:"/>
+		<echo message=""/>
+		<echo message="clean        --> Clean output dirs"/>
+		<echo message="build        --> Compile main java sources"/>
+		<!-- <echo message="junit         Run unit test"/ -->
+		<!-- <echo message="junitreport   Run tests and create JUnit report"/ -->
+		<echo message="war          --> Create WAR deployment unit"/>
+		<echo message="------------------------------------------------------"/>
+		<echo message=""/>
+	</target>
+
+	<target name="clean" description="Clean output dirs">		
+		<delete dir="${target.dir}"/>
+		<delete dir="${dist.dir}"/>
+		<delete dir="${release.dir}"/>
+	</target>
+	
+	<target name="make" description="Clean output dirs">	
+		<mkdir dir="${release.dir}"/>
+		<mkdir dir="${target.dir}"/>
+		<mkdir dir="${dist.dir}"/>
+	</target>
+
+	<target name="build" depends="clean, make" description="Compile main java sources">
+		<javac destdir="${target.dir}" debug="true" deprecation="true">
+			<src path="${src.java.dir}"/>
+			<classpath refid="all-libs"/>
+		</javac>
+		
+		<!-- copy other none java files such as hibernate hbm.xml files -->
+		<copy todir="${target.dir}" preservelastmodified="true">
+			<fileset dir="${src.java.dir}">
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>		
+	</target>
+	
+	<!--
+	<target name="junit" depends="clean, build" description="Run unit test">
+		<mkdir dir="${test.dir}"/>
+		<mkdir dir="${test.dir}/report"/>
+		
+		<javac destdir="${test.dir}" debug="true" deprecation="true">
+			<src path="${src.test.dir}"/>
+			<classpath location="${target.dir}"/>			
+			<classpath refid="all-libs"/>
+		</javac>
+		
+		<copy todir="${test.dir}" preservelastmodified="true">
+			<fileset dir="${src.test.dir}">
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+
+		<junit fork="yes" haltonfailure="yes">
+			<classpath location="${target.dir}"/>
+			<classpath location="${test.dir}"/>
+			<classpath refid="all-libs"/>
+
+			<formatter type="xml"/>
+
+			<batchtest fork="yes" todir="${test.dir}/report">
+				<fileset dir="${test.dir}" includes="**/*Test.class" excludes="**/*AbstractTest.class"/>
+			</batchtest>
+		</junit>    
+	</target>
+	
+	<target name="junitreport" depends="junit" description="Run tests and create JUnit report"> 
+		<junitreport todir="${test.dir}"> 
+        	<fileset dir="${test.dir}/report"> 
+            	<include name="TEST-*.xml"/> 
+			</fileset> 
+			<report format="frames" todir="${test.dir}/htmlreport"/> 
+		</junitreport> 
+    </target>	
+	-->
+	
+	<target name="jar" depends="build" description="Create jar deployment unit">
+		<jar destfile="${dist.dir}/${jar.name}">
+		    <fileset dir="${target.dir}">
+			    <include name="com/company/common/action/*.class"/> 
+			    <include name="com/company/common/tools/*.class"/>
+			    <include name="com/company/dao/*.class"/>
+			    <include name="com/company/persist/manager/*.class"/>
+		    </fileset>
+		</jar>
+	</target>
+	
+	<target name="war" depends="clean, build" description="Create WAR deployment unit">
+					
+		<war warfile="${dist.dir}/${war.name}.war" webxml="${war.dir}/WEB-INF/web.xml">
+			<!-- Include the css, images and other documents -->
+			<fileset dir="${war.dir}" excludes="WEB-INF/**"/>
+			
+			<webinf dir="${war.dir}/WEB-INF">
+				<exclude name="classes/**"/>
+				<exclude name="web.xml"/>
+			</webinf>
+			
+			<!-- Include the compiled classes -->
+			<classes dir="${target.dir}"/>
+
+			<!-- OTHER COMMONS LIBS -->
+			<lib dir="${lib.dir}/cglib" includes="*.jar" />
+       		<lib dir="${lib.dir}/common" includes="*.jar" />			
+    		<lib dir="${lib.dir}/dom4j" includes="*.jar" />
+			<lib dir="${lib.dir}/ehcache" includes="*.jar" />
+    		<lib dir="${lib.dir}/log4j" includes="*.jar" />
+    		<lib dir="${lib.dir}/ognl" includes="*.jar" />
+    		<lib dir="${lib.dir}/opensymphony" includes="*.jar" />    		    		
+			<lib dir="${lib.dir}/xstream" includes="*.jar" />
+			<lib dir="${lib.dir}/j2ee" includes="*.jar">
+				<!-- The servlet container provides the Servlet API -->
+				<exclude name="servlet-2.3.jar"/>
+			</lib> 
+			
+						
+			<!-- WEB FRAMEWORK LIBS-->
+			<lib dir="${lib.dir}/struts" includes="*.jar" />
+
+			<!-- O/R MAPPING LIBS-->
+			<lib dir="${lib.dir}/hibernate" includes="*.jar" />
+			<lib dir="${lib.dir}/cglib" includes="*.jar" />
+       		<lib dir="${lib.dir}/common" includes="*.jar" />			
+    		
+			<!-- DB DRIVER LIBD -->
+			<lib dir="${lib.dir}/drive" includes="*.jar" />
+			<lib dir="${lib.dir}/hsqldb" includes="*.jar" />
+			
+		</war>
+	</target>
+
+	<target name="publish" depends="war">
+		
+        <copy todir="${tomcat.dir}/webapps">
+            <fileset dir="${dist.dir}">
+        	</fileset>
+        </copy>
+	</target>
+
+	
+	<target name="all" depends="war">
+		
+        <copy todir="${release.dir}">
+            <fileset dir=".">
+               	<exclude name="data/**"/>
+				<exclude name="log/**"/>
+               	<exclude name="dist/**"/>
+        	</fileset>
+        </copy>
+		
+        <zip zipfile="${dist.dir}/example-${version}.zip" basedir="${release.dir}"/>
+
+	</target>
+	
+	
+</project>

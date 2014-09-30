@@ -1,0 +1,10 @@
+body { background-color:#f4f4f4; margin:0px;overflow-x:hidden; }
+
+.clicked{ font:14px;color:#000000;font-weight:bold; height:26px;width:160px;margin:1px 0px 0px 0px;border:0;background-image:url('/btcjerpWeb/images/imagesofmenu/menuclicked.gif');text-align:left;padding-left:12px; }
+
+input{ font:14px;color:#333333;height:26px;width:160px;margin:4px 0px 0px 0px;border:0;cursor:hand;text-align:left;background-image:url('/btcjerpWeb/images/imagesofmenu/menunormal3.gif');padding-left:12px; }
+
+.originalselect{font:14px;color:#000000;font-weight:bold;height:26px;width:160px;background-image:url('/btcjerpWeb/images/imagesofmenu/menuclicked.gif');margin:4px 0px 0px 0px;border:0;cursor:default;text-align:left;padding-left:12px; }
+
+.normal{ font:14px;color:#333333;height:26px;width:160px;margin:4px 0px 0px 0px;border:0;cursor:hand;text-align:left;background-image:url('/btcjerpWeb/images/imagesofmenu/menunormal3.gif'); padding-left:12px; }
+

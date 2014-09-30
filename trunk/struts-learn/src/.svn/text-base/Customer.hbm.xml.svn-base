@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+
+<!-- DO NOT EDIT: This is a generated file that is synchronized -->
+<!-- by MyEclipse Hibernate tool integration.                   -->
+<!-- Created Wed Jul 27 12:01:58 CEST 2005                         -->
+<hibernate-mapping package="com.company.vo">
+
+	<class name="Customer" table="customer">
+		<id name="id" column="id" type="java.lang.Integer">
+			<!--
+			<generator class="sequence">
+				<param name="sequence">customer_id_seq</param>
+			</generator>
+			-->
+
+			<generator class="native"> 
+			</generator> 
+
+		</id>
+		
+		<!--
+		<bag name="books" lazy="true" inverse="true" cascade="all">
+		-->
+		<bag name="books" inverse="false">
+			<key column="customer_fk" />
+			<one-to-many class="Book" />
+		</bag>
+		<property name="name" column="name" type="java.lang.String" />
+		<property name="lastname" column="lastname"
+			type="java.lang.String" />
+		<property name="age" column="age" type="java.lang.Integer" />
+
+
+	</class>
+
+</hibernate-mapping>

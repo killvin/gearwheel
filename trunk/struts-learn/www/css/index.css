@@ -1,0 +1,17 @@
+body {  font-family: "ËÎÌו"; font-size: 9pt; color: #000000; margin-top: 0px; margin-left: 0px;}
+A:LINK{font-family : sans-serif;color : red; text-decoration : none;}
+A:VISITED{
+  color : red;
+  text-decoration : none;
+}
+A:HOVER{
+  color : red;
+  text-decoration : none;
+}
+.tr1{
+  background-color : black;
+  
+}
+.tr2{
+  background-color : #eaeaea;
+}

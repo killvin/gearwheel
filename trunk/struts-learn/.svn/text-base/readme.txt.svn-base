@@ -1,0 +1,2 @@
+目前的实例支持Mysql数据库
+请在运行实例前在Mysql数据库(test)中运行bin/mysqlDBSchema.sql

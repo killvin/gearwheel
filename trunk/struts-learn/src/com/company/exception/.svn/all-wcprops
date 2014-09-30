@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/39/trunk/struts-learn/src/com/company/exception
+END
+SystemException.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/39/trunk/struts-learn/src/com/company/exception/SystemException.java
+END
+BusinessException.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/39/trunk/struts-learn/src/com/company/exception/BusinessException.java
+END
+EntityNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/39/trunk/struts-learn/src/com/company/exception/EntityNotFoundException.java
+END
+SessionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/39/trunk/struts-learn/src/com/company/exception/SessionException.java
+END
+PersistServiceManageException.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/39/trunk/struts-learn/src/com/company/exception/PersistServiceManageException.java
+END
